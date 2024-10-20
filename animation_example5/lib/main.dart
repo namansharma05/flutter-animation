@@ -63,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
               setState(() {
                 _isZoomedIn = !_isZoomedIn;
                 _buttonTitle = _isZoomedIn ? "Zoom Out" : "Zoom In";
-                _width = _isZoomedIn ? _width + 200 : 300;
+                _width = _isZoomedIn ? _width + 200 : defaultWidth;
               });
             },
             child: Text(_buttonTitle),
