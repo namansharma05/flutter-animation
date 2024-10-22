@@ -55,14 +55,14 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     super.initState();
     _circleController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 600),
+      duration: Duration(milliseconds: 300),
     )..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
-          Future.delayed(const Duration(milliseconds: 550), () {
+          Future.delayed(const Duration(milliseconds: 1000), () {
             _circleController.reverse();
           });
         } else if (status == AnimationStatus.dismissed) {
-          Future.delayed(const Duration(milliseconds: 550), () {
+          Future.delayed(const Duration(milliseconds: 1000), () {
             _circleController.forward();
           });
         }
@@ -73,14 +73,14 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
     _checkOffsetController = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 600),
+      duration: Duration(milliseconds: 300),
     )..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
-          Future.delayed(const Duration(milliseconds: 550), () {
+          Future.delayed(const Duration(milliseconds: 900), () {
             _checkOffsetController.reverse();
           });
         } else if (status == AnimationStatus.dismissed) {
-          Future.delayed(const Duration(milliseconds: 550), () {
+          Future.delayed(const Duration(milliseconds: 900), () {
             _checkOffsetController.forward();
           });
         }
